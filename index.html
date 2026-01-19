@@ -1,0 +1,629 @@
+{\rtf1\ansi\ansicpg936\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="zh-CN">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>\uc0\u30334 \u24230 \u36710 \u32852 \u32593 /\u26234 \u33021 \u24231 \u33329 \u19994 \u21153 \u20171 \u32461 </title>\
+    <!-- \uc0\u22806 \u37096 \u36164 \u28304 CDN\u65288 \u36873 \u25321 \u31283 \u23450 \u30340 CDN\u28304 \u65289  -->\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">\
+    <style>\
+        body \{\
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\
+            background-color: #FFFFFF;\
+        \}\
+        .card \{\
+            background-color: white;\
+            border: 1px solid #E5E7EB;\
+            border-radius: 1.25rem; /* 20px */\
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);\
+            overflow: hidden;\
+            position: relative;\
+        \}\
+        .card:hover \{\
+            transform: translateY(-4px);\
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);\
+        \}\
+        .highlight-gradient-blue \{\
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.05));\
+        \}\
+        .highlight-gradient-green \{\
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0), rgba(34, 197, 94, 0.05));\
+        \}\
+        .highlight-gradient-purple \{\
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 0.05));\
+        \}\
+        .highlight-gradient-orange \{\
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0), rgba(249, 115, 22, 0.05));\
+        \}\
+        .highlight-gradient-teal \{\
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0), rgba(20, 184, 166, 0.05));\
+        \}\
+        .timeline-line \{\
+            @apply absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200;\
+        \}\
+        .timeline-dot \{\
+            @apply absolute left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full bg-blue-500 z-10;\
+        \}\
+        /* \uc0\u21152 \u36733 \u21160 \u30011  */\
+        .loader \{\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            background: white;\
+            display: flex;\
+            justify-content: center;\
+            align-items: center;\
+            z-index: 9999;\
+            transition: opacity 0.5s ease;\
+        \}\
+        .loader.hidden \{\
+            opacity: 0;\
+            pointer-events: none;\
+        \}\
+        .spinner \{\
+            width: 50px;\
+            height: 50px;\
+            border: 5px solid #f3f3f3;\
+            border-top: 5px solid #3B82F6;\
+            border-radius: 50%;\
+            animation: spin 1s linear infinite;\
+        \}\
+        @keyframes spin \{\
+            0% \{ transform: rotate(0deg); \}\
+            100% \{ transform: rotate(360deg); \}\
+        \}\
+    </style>\
+</head>\
+<body class="bg-white">\
+    <!-- \uc0\u21152 \u36733 \u21160 \u30011  -->\
+    <div class="loader" id="loader">\
+        <div class="spinner"></div>\
+    </div>\
+\
+    <div class="max-w-7xl mx-auto p-4 md:p-8">\
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">\
+            <!-- \uc0\u20027 \u26631 \u39064 \u21345 \u29255  -->\
+            <div class="card md:col-span-4 p-8 flex flex-col justify-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>\
+                <div class="relative">\
+                    <div class="text-gray-400 text-lg font-medium mb-2">Baidu Connected Car / Smart Cockpit Business</div>\
+                    <div class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">\uc0\u30334 \u24230 \u36710 \u32852 \u32593 /\u26234 \u33021 \u24231 \u33329 <br>\u19994 \u21153 \u20171 \u32461 </div>\
+                    <div class="mt-4 text-2xl text-blue-600 font-semibold">2017-2026\uc0\u24180 </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u20851 \u38190 \u25968 \u25454 \u27010 \u35272 \u21345 \u29255  -->\
+            <div class="card md:col-span-2 p-6 flex flex-col justify-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>\
+                <div class="relative grid grid-cols-2 gap-6">\
+                    <div class="text-center">\
+                        <div class="text-5xl font-bold text-green-600">31</div>\
+                        <div class="mt-2 text-gray-600 font-medium">\uc0\u21512 \u20316 \u27773 \u36710 \u21697 \u29260 </div>\
+                    </div>\
+                    <div class="text-center">\
+                        <div class="text-5xl font-bold text-green-600">211</div>\
+                        <div class="mt-2 text-gray-600 font-medium">\uc0\u37327 \u20135 \u36710 \u22411 </div>\
+                    </div>\
+                    <div class="text-center">\
+                        <div class="text-5xl font-bold text-green-600">900\uc0\u19975 +</div>\
+                        <div class="mt-2 text-gray-600 font-medium">\uc0\u32047 \u35745 \u25645 \u36733 \u37327 </div>\
+                    </div>\
+                    <div class="text-center">\
+                        <div class="text-5xl font-bold text-green-600">420</div>\
+                        <div class="mt-2 text-gray-600 font-medium">\uc0\u29983 \u24577 \u20249 \u20276 </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u21457 \u23637 \u38454 \u27573 \u21345 \u29255  -->\
+            <div class="card md:col-span-2 p-6 flex flex-col justify-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>\
+                <div class="relative">\
+                    <div class="text-xl font-bold text-gray-800 mb-4">\uc0\u19977 \u22823 \u21457 \u23637 \u38454 \u27573 </div>\
+                    <div class="space-y-3">\
+                        <div class="flex items-center">\
+                            <div class="w-3 h-3 rounded-full bg-purple-500 mr-3"></div>\
+                            <div>\
+                                <div class="font-semibold text-gray-700">\uc0\u25216 \u26415 \u39564 \u35777 \u19982 \u20135 \u21697 \u21270 \u25506 \u32034 </div>\
+                                <div class="text-sm text-gray-500">2017-2019\uc0\u24180 </div>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-center">\
+                            <div class="w-3 h-3 rounded-full bg-purple-500 mr-3"></div>\
+                            <div>\
+                                <div class="font-semibold text-gray-700">\uc0\u21830 \u19994 \u21270 \u37327 \u20135 \u19982 \u29983 \u24577 \u25193 \u24352 </div>\
+                                <div class="text-sm text-gray-500">2020-2022\uc0\u24180 </div>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-center">\
+                            <div class="w-3 h-3 rounded-full bg-purple-500 mr-3"></div>\
+                            <div>\
+                                <div class="font-semibold text-gray-700">AI\uc0\u22823 \u27169 \u22411 \u39537 \u21160 \u30340 \u26234 \u33021 \u21270 \u21319 \u32423 </div>\
+                                <div class="text-sm text-gray-500">2023-2026\uc0\u24180 </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u26680 \u24515 \u20135 \u21697 \u21345 \u29255  -->\
+            <div class="card md:col-span-1 p-6 flex flex-col justify-center items-center text-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-orange"></div>\
+                <div class="relative">\
+                    <i class="fa-solid fa-car-on text-5xl text-orange-500 mb-4"></i>\
+                    <div class="text-xl font-bold text-gray-800">Apollo</div>\
+                    <div class="text-sm text-gray-500 mt-1">\uc0\u33258 \u21160 \u39550 \u39542 \u24179 \u21488 </div>\
+                </div>\
+            </div>\
+\
+            <div class="card md:col-span-1 p-6 flex flex-col justify-center items-center text-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-teal"></div>\
+                <div class="relative">\
+                    <i class="fa-solid fa-microchip text-5xl text-teal-500 mb-4"></i>\
+                    <div class="text-xl font-bold text-gray-800">\uc0\u23567 \u24230 \u36710 \u36733 OS</div>\
+                    <div class="text-sm text-gray-500 mt-1">\uc0\u26234 \u33021 \u24231 \u33329 \u31995 \u32479 </div>\
+                </div>\
+            </div>\
+\
+            <div class="card md:col-span-1 p-6 flex flex-col justify-center items-center text-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>\
+                <div class="relative">\
+                    <i class="fa-solid fa-map-location-dot text-5xl text-blue-500 mb-4"></i>\
+                    <div class="text-xl font-bold text-gray-800">\uc0\u30334 \u24230 \u22320 \u22270 </div>\
+                    <div class="text-sm text-gray-500 mt-1">\uc0\u36710 \u36733 \u23548 \u33322 \u26381 \u21153 </div>\
+                </div>\
+            </div>\
+\
+            <div class="card md:col-span-1 p-6 flex flex-col justify-center items-center text-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>\
+                <div class="relative">\
+                    <i class="fa-solid fa-robot text-5xl text-green-500 mb-4"></i>\
+                    <div class="text-xl font-bold text-gray-800">\uc0\u33821 \u21340 \u24555 \u36305 </div>\
+                    <div class="text-sm text-gray-500 mt-1">\uc0\u33258 \u21160 \u39550 \u39542 \u20986 \u34892 </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u21457 \u23637 \u21382 \u31243 \u26102 \u38388 \u36724 \u21345 \u29255  -->\
+            <div class="card md:col-span-4 p-8">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>\
+                <div class="relative">\
+                    <div class="text-2xl font-bold text-gray-800 mb-8">\uc0\u21457 \u23637 \u21382 \u31243 \u26102 \u38388 \u36724 </div>\
+                    <div class="relative">\
+                        <div class="timeline-line"></div>\
+                        \
+                        <!-- 2017\uc0\u24180  -->\
+                        <div class="relative flex items-center mb-12">\
+                            <div class="timeline-dot bg-blue-500"></div>\
+                            <div class="w-1/2 pr-8 text-right">\
+                                <div class="text-xl font-bold text-blue-600">2017\uc0\u24180 </div>\
+                                <div class="text-gray-700 mt-1">Apollo\uc0\u35745 \u21010 \u21457 \u24067 \u65292 \u23567 \u24230 \u36710 \u36733 \u31995 \u32479 \u25512 \u20986 </div>\
+                            </div>\
+                            <div class="w-1/2 pl-8"></div>\
+                        </div>\
+\
+                        <!-- 2019\uc0\u24180  -->\
+                        <div class="relative flex items-center mb-12">\
+                            <div class="timeline-dot bg-green-500"></div>\
+                            <div class="w-1/2 pr-8"></div>\
+                            <div class="w-1/2 pl-8">\
+                                <div class="text-xl font-bold text-green-600">2019\uc0\u24180 </div>\
+                                <div class="text-gray-700 mt-1">\uc0\u23567 \u24230 \u36710 \u36733 OS\u21319 \u32423 \u65292 \u21830 \u19994 \u21270 \u37327 \u20135 \u21551 \u21160 </div>\
+                            </div>\
+                        </div>\
+\
+                        <!-- 2021\uc0\u24180  -->\
+                        <div class="relative flex items-center mb-12">\
+                            <div class="timeline-dot bg-purple-500"></div>\
+                            <div class="w-1/2 pr-8 text-right">\
+                                <div class="text-xl font-bold text-purple-600">2021\uc0\u24180 </div>\
+                                <div class="text-gray-700 mt-1">\uc0\u26234 \u33021 \u27773 \u36710 \u20107 \u19994 \u37096 \u25104 \u31435 \u65292 \u33821 \u21340 \u24555 \u36305 \u21457 \u24067 </div>\
+                            </div>\
+                            <div class="w-1/2 pl-8"></div>\
+                        </div>\
+\
+                        <!-- 2023\uc0\u24180  -->\
+                        <div class="relative flex items-center mb-12">\
+                            <div class="timeline-dot bg-orange-500"></div>\
+                            <div class="w-1/2 pr-8"></div>\
+                            <div class="w-1/2 pl-8">\
+                                <div class="text-xl font-bold text-orange-600">2023\uc0\u24180 </div>\
+                                <div class="text-gray-700 mt-1">\uc0\u25991 \u24515 \u22823 \u27169 \u22411 \u36171 \u33021 \u26234 \u33021 \u24231 \u33329 \u65292 \u26234 \u39550 \u24320 \u25918 \u30333 \u30382 \u20070 \u21457 \u24067 </div>\
+                            </div>\
+                        </div>\
+\
+                        <!-- 2024\uc0\u24180  -->\
+                        <div class="relative flex items-center">\
+                            <div class="timeline-dot bg-teal-500"></div>\
+                            <div class="w-1/2 pr-8 text-right">\
+                                <div class="text-xl font-bold text-teal-600">2024\uc0\u24180 </div>\
+                                <div class="text-gray-700 mt-1">\uc0\u30334 \u24230 \u22320 \u22270 V20\u21457 \u24067 \u65292 \u33329 \u39550 \u19968 \u20307 \u26041 \u26696 \u37327 \u20135 </div>\
+                            </div>\
+                            <div class="w-1/2 pl-8"></div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u35013 \u26426 \u37327 \u22686 \u38271 \u22270 \u34920 \u21345 \u29255  -->\
+            <div class="card md:col-span-2 p-6 flex flex-col">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>\
+                <div class="relative flex-shrink-0 mb-4">\
+                    <div class="text-xl font-bold text-gray-800">\uc0\u32047 \u35745 \u35013 \u26426 \u37327 \u22686 \u38271 \u36235 \u21183 </div>\
+                    <div class="text-sm text-gray-500">\uc0\u21333 \u20301 \u65306 \u19975 \u36742 </div>\
+                </div>\
+                <div class="relative flex-grow min-h-[250px] md:h-64">\
+                    <canvas id="installationChart"></canvas>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u35821 \u38899 \u21161 \u25163 \u21151 \u33021 \u28436 \u36827 \u21345 \u29255  -->\
+            <div class="card md:col-span-2 p-6">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>\
+                <div class="relative">\
+                    <div class="text-xl font-bold text-gray-800 mb-4">\uc0\u35821 \u38899 \u21161 \u25163 \u21151 \u33021 \u28436 \u36827 </div>\
+                    <div class="space-y-4">\
+                        <div class="flex items-start">\
+                            <div class="bg-purple-100 rounded-full p-2 mr-4 mt-1">\
+                                <i class="fa-solid fa-microphone text-purple-600"></i>\
+                            </div>\
+                            <div>\
+                                <div class="font-semibold text-gray-700">\uc0\u22522 \u30784 \u35821 \u38899 \u20132 \u20114  (2017-2018)</div>\
+                                <div class="text-sm text-gray-500">\uc0\u35821 \u38899 \u35782 \u21035 \u12289 \u35821 \u20041 \u29702 \u35299 \u12289 \u25351 \u20196 \u25191 \u34892 </div>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-start">\
+                            <div class="bg-purple-100 rounded-full p-2 mr-4 mt-1">\
+                                <i class="fa-solid fa-brain text-purple-600"></i>\
+                            </div>\
+                            <div>\
+                                <div class="font-semibold text-gray-700">\uc0\u26234 \u33021 \u21270 \u21319 \u32423  (2020-2022)</div>\
+                                <div class="text-sm text-gray-500">\uc0\u20840 \u21452 \u24037 \u20813 \u21796 \u37266 \u12289 \u34394 \u25311 \u21161 \u25163 \u24418 \u35937 \u12289 \u22330 \u26223 \u24863 \u30693 </div>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-start">\
+                            <div class="bg-purple-100 rounded-full p-2 mr-4 mt-1">\
+                                <i class="fa-solid fa-infinity text-purple-600"></i>\
+                            </div>\
+                            <div>\
+                                <div class="font-semibold text-gray-700">AI\uc0\u22823 \u27169 \u22411 \u39537 \u21160  (2023\u33267 \u20170 )</div>\
+                                <div class="text-sm text-gray-500">\uc0\u25991 \u24515 \u22823 \u27169 \u22411 \u12289 MoE\u26550 \u26500 \u12289 \u31471 \u21040 \u31471 \u35821 \u38899 \u22823 \u27169 \u22411 </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u35821 \u38899 \u21161 \u25163 \u20135 \u21697 \u36845 \u20195 \u19982 \u25104 \u32489 \u21345 \u29255  -->\
+            <div class="card md:col-span-4 p-8">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>\
+                <div class="relative">\
+                    <div class="text-2xl font-bold text-gray-800 mb-6">\uc0\u35821 \u38899 \u21161 \u25163 \u20135 \u21697 \u36845 \u20195 \u19982 \u26680 \u24515 \u25104 \u32489 </div>\
+                    \
+                    <!-- \uc0\u36845 \u20195 \u36335 \u24452 \u19982 \u20851 \u38190 \u25351 \u26631  -->\
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">\
+                        <!-- \uc0\u24038 \u20391 \u65306 \u29256 \u26412 \u36845 \u20195 \u36335 \u24452  -->\
+                        <div>\
+                            <div class="text-xl font-semibold text-purple-700 mb-4 flex items-center">\
+                                <i class="fa-solid fa-road mr-3"></i>\uc0\u26680 \u24515 \u29256 \u26412 \u36845 \u20195 \u36335 \u24452 \
+                            </div>\
+                            <div class="space-y-4">\
+                                <div class="bg-white border border-purple-100 rounded-lg p-4 shadow-sm">\
+                                    <div class="font-bold text-gray-800">V1.0 (2017-2018)</div>\
+                                    <div class="text-sm text-gray-600 mt-1">\
+                                        \uc0\u22522 \u30784 \u29256 \u65306 \u25903 \u25345 \u21333 \u28857 \u35821 \u38899 \u25351 \u20196 \u65288 \u23548 \u33322 \u12289 \u38899 \u20048 \u12289 \u30005 \u35805 \u65289 \u65292 \u35782 \u21035 \u20934 \u30830 \u29575 85%\u65292 \u21796 \u37266 \u29575 90%\
+                                    </div>\
+                                </div>\
+                                <div class="bg-white border border-purple-100 rounded-lg p-4 shadow-sm">\
+                                    <div class="font-bold text-gray-800">V2.0 (2018-2019)</div>\
+                                    <div class="text-sm text-gray-600 mt-1">\
+                                        \uc0\u36827 \u38454 \u29256 \u65306 \u20840 \u21452 \u24037 \u20813 \u21796 \u37266 \u12289 \u22810 \u36718 \u23545 \u35805 \u65292 \u35782 \u21035 \u20934 \u30830 \u29575 \u25552 \u21319 \u33267 92%\u65292 \u25903 \u25345 20+\u26041 \u35328 \
+                                    </div>\
+                                </div>\
+                                <div class="bg-white border border-purple-100 rounded-lg p-4 shadow-sm">\
+                                    <div class="font-bold text-gray-800">V3.0 (2019-2022)</div>\
+                                    <div class="text-sm text-gray-600 mt-1">\
+                                        \uc0\u26234 \u33021 \u29256 \u65306 \u22330 \u26223 \u24863 \u30693 \u12289 \u20010 \u24615 \u21270 \u25512 \u33616 \u65292 \u21796 \u37266 \u21709 \u24212 \u36895 \u24230 <500ms\u65292 \u35206 \u30422 80+\u36710 \u36733 \u22330 \u26223 \
+                                    </div>\
+                                </div>\
+                                <div class="bg-white border border-purple-100 rounded-lg p-4 shadow-sm">\
+                                    <div class="font-bold text-gray-800">V4.0 (2023\uc0\u33267 \u20170 )</div>\
+                                    <div class="text-sm text-gray-600 mt-1">\
+                                        \uc0\u22823 \u27169 \u22411 \u29256 \u65306 \u25991 \u24515 \u22823 \u27169 \u22411 \u36171 \u33021 \u65292 \u31471 \u21040 \u31471 \u35821 \u38899 \u29702 \u35299 \u65292 \u24847 \u22270 \u35782 \u21035 \u20934 \u30830 \u29575 98%\u65292 \u25903 \u25345 \u36328 \u22330 \u26223 \u19978 \u19979 \u25991 \
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+\
+                        <!-- \uc0\u21491 \u20391 \u65306 \u26680 \u24515 \u25104 \u32489 \u19982 \u25968 \u25454  -->\
+                        <div>\
+                            <div class="text-xl font-semibold text-purple-700 mb-4 flex items-center">\
+                                <i class="fa-solid fa-trophy mr-3"></i>\uc0\u26680 \u24515 \u25104 \u32489 \u19982 \u34892 \u19994 \u25968 \u25454 \
+                            </div>\
+                            <div class="grid grid-cols-2 gap-4">\
+                                <div class="bg-purple-50 rounded-lg p-4 text-center">\
+                                    <div class="text-4xl font-bold text-purple-600">98.2%</div>\
+                                    <div class="text-sm text-gray-600 mt-2">2024\uc0\u24180 \u35821 \u38899 \u35782 \u21035 \u20934 \u30830 \u29575 </div>\
+                                </div>\
+                                <div class="bg-purple-50 rounded-lg p-4 text-center">\
+                                    <div class="text-4xl font-bold text-purple-600">0.3s</div>\
+                                    <div class="text-sm text-gray-600 mt-2">\uc0\u24179 \u22343 \u21796 \u37266 \u21709 \u24212 \u36895 \u24230 </div>\
+                                </div>\
+                                <div class="bg-purple-50 rounded-lg p-4 text-center">\
+                                    <div class="text-4xl font-bold text-purple-600">40+</div>\
+                                    <div class="text-sm text-gray-600 mt-2">\uc0\u25903 \u25345 \u26041 \u35328 /\u21475 \u38899 \u31181 \u31867 </div>\
+                                </div>\
+                                <div class="bg-purple-50 rounded-lg p-4 text-center">\
+                                    <div class="text-4xl font-bold text-purple-600">95%</div>\
+                                    <div class="text-sm text-gray-600 mt-2">\uc0\u29992 \u25143 \u35821 \u38899 \u20132 \u20114 \u28183 \u36879 \u29575 </div>\
+                                </div>\
+                            </div>\
+                            \
+                            <!-- \uc0\u34892 \u19994 \u23545 \u27604  -->\
+                            <div class="mt-6 bg-white border border-purple-100 rounded-lg p-4 shadow-sm">\
+                                <div class="font-semibold text-gray-800 mb-2">\uc0\u34892 \u19994 \u23545 \u27604 \u65288 2024\u24180 \u65289 </div>\
+                                <div class="space-y-2 text-sm">\
+                                    <div class="flex justify-between">\
+                                        <span class="text-gray-600">\uc0\u30334 \u24230 \u23567 \u24230 \u36710 \u36733 \u35821 \u38899 </span>\
+                                        <span class="font-medium text-purple-600">\uc0\u35782 \u21035 \u20934 \u30830 \u29575  98.2% | \u21709 \u24212 \u36895 \u24230  0.3s</span>\
+                                    </div>\
+                                    <div class="flex justify-between">\
+                                        <span class="text-gray-600">\uc0\u21326 \u20026 \u40511 \u33945 \u36710 \u36733 \u35821 \u38899 </span>\
+                                        <span class="font-medium text-gray-600">\uc0\u35782 \u21035 \u20934 \u30830 \u29575  97.8% | \u21709 \u24212 \u36895 \u24230  0.4s</span>\
+                                    </div>\
+                                    <div class="flex justify-between">\
+                                        <span class="text-gray-600">\uc0\u38463 \u37324 \u26001 \u39532 \u35821 \u38899 </span>\
+                                        <span class="font-medium text-gray-600">\uc0\u35782 \u21035 \u20934 \u30830 \u29575  96.5% | \u21709 \u24212 \u36895 \u24230  0.6s</span>\
+                                    </div>\
+                                    <div class="flex justify-between">\
+                                        <span class="text-gray-600">\uc0\u33150 \u35759 \u26791 \u26704 \u35821 \u38899 </span>\
+                                        <span class="font-medium text-gray-600">\uc0\u35782 \u21035 \u20934 \u30830 \u29575  95.9% | \u21709 \u24212 \u36895 \u24230  0.7s</span>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+\
+                    <!-- \uc0\u20851 \u38190 \u31361 \u30772 \u28857  -->\
+                    <div>\
+                        <div class="text-xl font-semibold text-purple-700 mb-4 flex items-center">\
+                            <i class="fa-solid fa-lightbulb mr-3"></i>\uc0\u26680 \u24515 \u25216 \u26415 \u31361 \u30772 \u19982 \u21830 \u19994 \u20215 \u20540 \
+                        </div>\
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">\
+                            <div class="bg-purple-50 rounded-lg p-4">\
+                                <div class="font-bold text-gray-800 mb-2">MoE\uc0\u26550 \u26500 \u20248 \u21270 </div>\
+                                <div class="text-sm text-gray-600">\
+                                    \uc0\u22522 \u20110 \u28151 \u21512 \u19987 \u23478 \u27169 \u22411 \u65292 \u35821 \u38899 \u27169 \u22411 \u20307 \u31215 \u38477 \u20302 60%\u65292 \u31471 \u20391 \u25512 \u29702 \u36895 \u24230 \u25552 \u21319 3\u20493 \u65292 \u36866 \u37197 \u20302 \u37197 \u36710 \u26426 \u30828 \u20214 \
+                                </div>\
+                            </div>\
+                            <div class="bg-purple-50 rounded-lg p-4">\
+                                <div class="font-bold text-gray-800 mb-2">\uc0\u31471 \u20113 \u34701 \u21512 \u26041 \u26696 </div>\
+                                <div class="text-sm text-gray-600">\
+                                    \uc0\u26412 \u22320 \u32531 \u23384 \u39640 \u39057 \u25351 \u20196 \u65292 \u20113 \u31471 \u22788 \u29702 \u22797 \u26434 \u35821 \u20041 \u65292 \u31163 \u32447 \u35782 \u21035 \u29575 \u20173 \u36798 90%\u65292 \u35299 \u20915 \u36710 \u36733 \u32593 \u32476 \u19981 \u31283 \u23450 \u38382 \u39064 \
+                                </div>\
+                            </div>\
+                            <div class="bg-purple-50 rounded-lg p-4">\
+                                <div class="font-bold text-gray-800 mb-2">\uc0\u21830 \u19994 \u33853 \u22320 \u25104 \u26524 </div>\
+                                <div class="text-sm text-gray-600">\
+                                    \uc0\u32047 \u35745 \u25645 \u36733 800\u19975 +\u36710 \u36742 \u65292 \u25104 \u20026 15\u23478 \u20027 \u27969 \u36710 \u20225 \u26631 \u37197 \u65292 \u35821 \u38899 \u20132 \u20114 \u26085 \u22343 \u20351 \u29992 \u27425 \u25968 \u36229 2.3\u20159 \u27425 \
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u21512 \u20316 \u20249 \u20276 \u34920 \u26684 \u21345 \u29255  -->\
+            <div class="card md:col-span-4 p-6">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-orange"></div>\
+                <div class="relative">\
+                    <div class="text-xl font-bold text-gray-800 mb-4">\uc0\u20027 \u35201 \u21512 \u20316 \u20249 \u20276 </div>\
+                    <div class="overflow-x-auto">\
+                        <table class="w-full text-left">\
+                            <thead>\
+                                <tr class="border-b border-gray-200">\
+                                    <th class="pb-3 font-semibold text-gray-700">\uc0\u21512 \u20316 \u31867 \u22411 </th>\
+                                    <th class="pb-3 font-semibold text-gray-700">\uc0\u20195 \u34920 \u20225 \u19994 </th>\
+                                    <th class="pb-3 font-semibold text-gray-700">\uc0\u21512 \u20316 \u20869 \u23481 </th>\
+                                </tr>\
+                            </thead>\
+                            <tbody class="text-sm">\
+                                <tr class="border-b border-gray-100">\
+                                    <td class="py-3 font-medium text-orange-600">\uc0\u27773 \u36710 \u21697 \u29260 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u21513 \u21033 \u12289 \u27604 \u20122 \u36842 \u12289 \u31119 \u29305 \u12289 \u20016 \u30000 \u12289 \u29616 \u20195 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u26234 \u33021 \u24231 \u33329 \u12289 \u33258 \u21160 \u39550 \u39542 \u35299 \u20915 \u26041 \u26696 </td>\
+                                </tr>\
+                                <tr class="border-b border-gray-100">\
+                                    <td class="py-3 font-medium text-orange-600">\uc0\u33455 \u29255 \u21378 \u21830 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u39640 \u36890 \u12289 \u21326 \u20026 \u12289 \u22320 \u24179 \u32447 \u12289 \u40657 \u33437 \u40635 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u26234 \u33021 \u24231 \u33329 \u33455 \u29255 \u12289 \u33258 \u21160 \u39550 \u39542 \u33455 \u29255 </td>\
+                                </tr>\
+                                <tr class="border-b border-gray-100">\
+                                    <td class="py-3 font-medium text-orange-600">\uc0\u20869 \u23481 \u26381 \u21153 \u21830 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u33150 \u35759 \u38899 \u20048 \u12289 \u21916 \u39532 \u25289 \u38597 \u12289 \u29233 \u22855 \u33402 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u38899 \u20048 \u12289 \u26377 \u22768 \u20070 \u12289 \u35270 \u39057 \u20869 \u23481 </td>\
+                                </tr>\
+                                <tr>\
+                                    <td class="py-3 font-medium text-orange-600">\uc0\u20986 \u34892 \u24179 \u21488 </td>\
+                                    <td class="py-3 text-gray-600">\uc0\u39318 \u27773 \u32422 \u36710 \u12289 Uber</td>\
+                                    <td class="py-3 text-gray-600">Robotaxi\uc0\u21830 \u19994 \u21270 \u36816 \u33829 </td>\
+                                </tr>\
+                            </tbody>\
+                        </table>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u25216 \u26415 \u26550 \u26500 \u28436 \u36827 \u21345 \u29255  -->\
+            <div class="card md:col-span-2 p-6">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-teal"></div>\
+                <div class="relative">\
+                    <div class="text-xl font-bold text-gray-800 mb-4">\uc0\u25216 \u26415 \u26550 \u26500 \u28436 \u36827 </div>\
+                    <div class="space-y-4">\
+                        <div class="bg-teal-50 rounded-lg p-4">\
+                            <div class="font-semibold text-teal-700">\uc0\u22522 \u30784 \u26550 \u26500  (2017-2018)</div>\
+                            <div class="text-sm text-gray-600 mt-1">DuerOS\uc0\u19977 \u23618 \u26550 \u26500 \u65306 \u24212 \u29992 \u23618 \u12289 \u26680 \u24515 \u23618 \u12289 \u33021 \u21147 \u23618 </div>\
+                        </div>\
+                        <div class="bg-teal-50 rounded-lg p-4">\
+                            <div class="font-semibold text-teal-700">\uc0\u27169 \u22359 \u21270 \u26550 \u26500  (2019-2020)</div>\
+                            <div class="text-sm text-gray-600 mt-1">\uc0\u23567 \u24230 \u36710 \u36733 OS\u22235 \u22823 \u32452 \u20214 \u65306 \u20202 \u34920 \u30424 \u12289 \u21518 \u35270 \u38236 \u12289 \u36710 \u26426 \u12289 \u26426 \u22120 \u20154 </div>\
+                        </div>\
+                        <div class="bg-teal-50 rounded-lg p-4">\
+                            <div class="font-semibold text-teal-700">\uc0\u24179 \u21488 \u21270 \u26550 \u26500  (2021-2022)</div>\
+                            <div class="text-sm text-gray-600 mt-1">\uc0\u20116 \u22823 \u25216 \u26415 \u22522 \u24231 \u65306 \u29983 \u24577 \u12289 AI\u12289 LBS\u12289 \u25968 \u25454 \u12289 \u31995 \u32479 </div>\
+                        </div>\
+                        <div class="bg-teal-50 rounded-lg p-4">\
+                            <div class="font-semibold text-teal-700">\uc0\u26234 \u33021 \u21270 \u26550 \u26500  (2023\u33267 \u20170 )</div>\
+                            <div class="text-sm text-gray-600 mt-1">\uc0\u25991 \u24515 \u22823 \u27169 \u22411 \u12289 MoE\u26550 \u26500 \u12289 \u31471 \u20113 \u34701 \u21512 </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u24066 \u22330 \u20221 \u39069 \u23545 \u27604 \u22270 \u34920 \u21345 \u29255  -->\
+            <div class="card md:col-span-2 p-6 flex flex-col">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>\
+                <div class="relative flex-shrink-0 mb-4">\
+                    <div class="text-xl font-bold text-gray-800">2024\uc0\u24180 \u26234 \u33021 \u24231 \u33329 \u24066 \u22330 \u20221 \u39069 </div>\
+                </div>\
+                <div class="relative flex-grow min-h-[250px] md:h-64">\
+                    <canvas id="marketShareChart"></canvas>\
+                </div>\
+            </div>\
+\
+            <!-- \uc0\u25112 \u30053 \u36716 \u22411 \u21345 \u29255  -->\
+            <div class="card md:col-span-4 p-8 flex items-center">\
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>\
+                <div class="relative w-full">\
+                    <div class="text-2xl font-bold text-gray-800 mb-6">\uc0\u25112 \u30053 \u36716 \u22411 \u65306 \u20174 \u25216 \u26415 \u36755 \u20986 \u21040 \u29983 \u24577 \u24179 \u21488 </div>\
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">\
+                        <div class="flex-1 text-center md:text-left">\
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4">\
+                                <i class="fa-solid fa-code text-2xl text-purple-600"></i>\
+                            </div>\
+                            <div class="font-bold text-lg text-gray-700">\uc0\u25216 \u26415 \u36755 \u20986 </div>\
+                            <div class="text-gray-500 mt-1">\uc0\u25552 \u20379 \u33258 \u21160 \u39550 \u39542 \u21644 \u26234 \u33021 \u24231 \u33329 \u25216 \u26415 \u35299 \u20915 \u26041 \u26696 </div>\
+                        </div>\
+                        <div class="flex-shrink-0 text-purple-400 text-3xl">\
+                            <i class="fa-solid fa-arrow-right-long"></i>\
+                        </div>\
+                        <div class="flex-1 text-center md:text-center">\
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">\
+                                <i class="fa-solid fa-handshake-angle text-2xl text-purple-600"></i>\
+                            </div>\
+                            <div class="font-bold text-lg text-gray-700">\uc0\u24320 \u25918 \u21512 \u20316 </div>\
+                            <div class="text-gray-500 mt-1">\uc0\u19982 \u36710 \u20225 \u28145 \u24230 \u21512 \u20316 \u65292 \u32852 \u21512 \u24320 \u21457 \u23450 \u21046 \u21270 \u20135 \u21697 </div>\
+                        </div>\
+                        <div class="flex-shrink-0 text-purple-400 text-3xl">\
+                            <i class="fa-solid fa-arrow-right-long"></i>\
+                        </div>\
+                        <div class="flex-1 text-center md:text-right">\
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4">\
+                                <i class="fa-solid fa-sitemap text-2xl text-purple-600"></i>\
+                            </div>\
+                            <div class="font-bold text-lg text-gray-700">\uc0\u29983 \u24577 \u24179 \u21488 </div>\
+                            <div class="text-gray-500 mt-1">\uc0\u26500 \u24314 \u24320 \u25918 \u30340 \u36710 \u32852 \u32593 \u29983 \u24577 \u31995 \u32479 \u65292 \u36171 \u33021 \u20840 \u20135 \u19994 \u38142 </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+    </div>\
+\
+    <script>\
+        // \uc0\u39029 \u38754 \u21152 \u36733 \u23436 \u25104 \u21518 \u38544 \u34255 \u21152 \u36733 \u21160 \u30011 \
+        window.addEventListener('load', function() \{\
+            setTimeout(function() \{\
+                document.getElementById('loader').classList.add('hidden');\
+            \}, 500);\
+        \});\
+\
+        // \uc0\u35013 \u26426 \u37327 \u22686 \u38271 \u22270 \u34920 \
+        const installationCtx = document.getElementById('installationChart').getContext('2d');\
+        new Chart(installationCtx, \{\
+            type: 'line',\
+            data: \{\
+                labels: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],\
+                datasets: [\{\
+                    label: '\uc0\u32047 \u35745 \u35013 \u26426 \u37327  (\u19975 \u36742 )',\
+                    data: [10, 50, 150, 350, 550, 700, 800, 900, 1050, 1200],\
+                    borderColor: '#22C55E',\
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',\
+                    borderWidth: 3,\
+                    fill: true,\
+                    tension: 0.4\
+                \}]\
+            \},\
+            options: \{\
+                responsive: true,\
+                maintainAspectRatio: false,\
+                plugins: \{\
+                    legend: \{\
+                        display: false\
+                    \}\
+                \},\
+                scales: \{\
+                    y: \{\
+                        beginAtZero: true,\
+                        grid: \{\
+                            color: 'rgba(0, 0, 0, 0.05)'\
+                        \}\
+                    \},\
+                    x: \{\
+                        grid: \{\
+                            display: false\
+                        \}\
+                    \}\
+                \}\
+            \}\
+        \});\
+\
+        // \uc0\u24066 \u22330 \u20221 \u39069 \u23545 \u27604 \u22270 \u34920 \
+        const marketShareCtx = document.getElementById('marketShareChart').getContext('2d');\
+        new Chart(marketShareCtx, \{\
+            type: 'doughnut',\
+            data: \{\
+                labels: ['\uc0\u30334 \u24230 Apollo', '\u21326 \u20026 \u40511 \u33945 ', '\u38463 \u37324 \u26001 \u39532 ', '\u33150 \u35759 \u26791 \u26704 ', '\u20854 \u20182 '],\
+                datasets: [\{\
+                    data: [18, 25, 12, 8, 37],\
+                    backgroundColor: [\
+                        '#3B82F6',\
+                        '#10B981',\
+                        '#8B5CF6',\
+                        '#F97316',\
+                        '#E5E7EB'\
+                    ],\
+                    borderWidth: 0\
+                \}]\
+            \},\
+            options: \{\
+                responsive: true,\
+                maintainAspectRatio: false,\
+                plugins: \{\
+                    legend: \{\
+                        position: 'bottom',\
+                        labels: \{\
+                            padding: 20,\
+                            usePointStyle: true\
+                        \}\
+                    \}\
+                \},\
+                cutout: '60%'\
+            \}\
+        \});\
+    </script>\
+</body>\
+</html>}
